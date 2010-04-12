@@ -1,0 +1,57 @@
+~~~ ->pd ~~~
+
+a simple python interface to pure data...
+
+~~~ testing ~~~
+
+run test.sh
+
+~~~ hacking ~~~
+
+open test.py... 
+
+or try something like this on you python interpreter...
+
+first... run pd...
+
+   $ pd recebe.pd &
+
+then... run python...
+
+   $ python
+
+so... line by line... with python on a window and recebe.pd on another...
+
+   from topy import *
+   p = Patch()
+   osc = Object('osc~', '440', 100, 100)
+   dac = Object('dac~', '', 100, 200)
+   p.create(osc)
+   p.create(dac)
+   p.connect(osc, 0, dac, 0)
+   p.connect(osc, 0, dac, 1)
+   p.dsp(1)
+   p.disconnect(osc, 0, dac, 0)
+   p.delete(osc)
+   p.dsp(0)
+
+or something more exentric...
+
+   from topy import *
+   from random import randint
+   p = Patch()
+   dac = Object('dac~', '', 250, 250)
+   p.create(dac)
+   for i in range(0, 500):
+       o = Object('osc~', str(i), randint(0, 500), randint(0, 500))
+       p.create(o)
+       p.connect(o, 0, dac, 0)
+       p.connect(o, 0, dac, 1)
+
+hope you enjoy...
+
+~~~ contributing ~~~
+
+http://automata.cc
+
+vilson@void.cc
