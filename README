@@ -29,7 +29,7 @@
 [*==] line by line... with python on a window and recebe.pd on another...
 [<o>] linha por linha... com python em uma janela e recebe.pd em outra...
 
-   from topy import *
+   from topd import *
    p = Patch()
    osc = Object('osc~', '440', 100, 100)
    dac = Object('dac~', '', 100, 200)
@@ -45,7 +45,7 @@
 [*==] or something more excentric...
 [<o>] ou algo mais excêntrico...
 
-   from topy import *
+   from topd import *
    from random import randint
    p = Patch()
    dac = Object('dac~', '', 250, 250)
