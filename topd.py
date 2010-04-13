@@ -1,38 +1,96 @@
 import socket
 
 class Box(object):
-    def __init__(self, x, y):
+    def __init__(self, patch, fudi_msg, x, y):
         self.x = x
         self.y = y
+        self.patch = patch
+        self.fudi_msg = fudi_msg
+        self.patch.boxes.append(self)
+        self.patch.editmode(1)
+        self.patch.s.send('pd-%s %s;' % (patch.filename, fudi_msg))
+
+    def delete(self):
+        self.patch.editmode(1)
+        self.patch.s.send('pd-%s mouse %i %i 1 0;' %
+                          (self.patch.filename, self.x - 1, self.y - 1))
+        self.patch.s.send('pd-%s motion %i %i 0;' %
+                          (self.patch.filename, self.x + 1, self.y + 1))
+        self.patch.s.send('pd-%s mouseup %i %i 1 0;' %
+                          (self.patch.filename, self.x + 1, self.y + 1))
+        self.patch.s.send('pd-%s cut;' % self.patch.filename)
+        self.patch.boxes.remove(self)
+
+    def move(self, x, y):
+        self.patch.editmode(1)
+        self.patch.s.send('pd-%s mouse %i %i 1 0;' %
+                          (self.patch.filename, self.x + 1, self.y + 1))
+        self.patch.s.send('pd-%s motion %i %i 0;' %
+                          (self.patch.filename, x, y))
+        self.patch.s.send('pd-%s mouseup 10 10 0 1;' % self.patch.filename)
+        self.x = x
+        self.y = y
+        self.patch.boxes[self.patch.boxes.index(self)] = self
+
+    def click(self):
+        self.patch.editmode(0)
+        self.patch.s.send('pd-%s mouse %i %i 1 0;' %
+                          (self.patch.filename, self.x + 1, self.y + 1))
+        self.patch.s.send('pd-%s mouseup %i %i 0 1;' %
+                          (self.patch.filename, self.x + 1, self.y + 1))
+
+    def edit(self, newbox):
+        print 'Sorry... not implemented yet :-P'
+
+    def connect(self, source_outlet, target_box, target_inlet):
+        self.patch.editmode(1)
+        self.patch.s.send('pd-%s connect %i %i %i %i;' %
+                          (self.patch.filename,
+                           self.patch.boxes.index(self) + 1, source_outlet,
+                           self.patch.boxes.index(target_box) + 1, target_inlet))
+
+    def disconnect(self, source_outlet, target_box, target_inlet):
+        self.patch.editmode(1)
+        self.patch.s.send('pd-%s disconnect %i %i %i %i;' %
+                          (self.patch.filename,
+                           self.patch.boxes.index(self) + 1, source_outlet,
+                           self.patch.boxes.index(target_box) + 1, target_inlet))
+
 
 class Object(Box):
-    def __init__(self, name, arguments, x, y):
-        super(Object, self).__init__(x, y)
+    def __init__(self, patch, name, arguments, x, y):
+        super(Object, self).__init__(patch,
+                                     'obj %i %i %s %s' %
+                                     (x, y, name, arguments),
+                                     x, y)
         self.name = name
         self.arguments = arguments
-        self.fudi_msg = 'obj %i %i %s %s' % (x, y, name, arguments)
 
 class Message(Box):
-    def __init__(self, value, x, y):
-        super(Message, self).__init__(x, y)
+    def __init__(self, patch, value, x, y):
+        super(Message, self).__init__(patch,
+                                      'msg %i %i %s' % (x, y, value),
+                                      x, y)
         self.value = value
-        self.fudi_msg = 'msg %i %i %s' % (x, y, value)
 
 class Number(Box):
-    def __init__(self, x, y):
-        super(Number, self).__init__(x, y)
-        self.fudi_msg = 'floatatom %i %i' % (x, y)
+    def __init__(self, patch, x, y):
+        super(Number, self).__init__(patch,
+                                     'floatatom %i %i' % (x, y),
+                                     x, y)
 
 class Symbol(Box):
-    def __init__(self, x, y):
-        super(Symbol, self).__init__(x, y)
-        self.fudi_msg = 'symbolatom %i %i' % (x, y)
+    def __init__(self, patch, x, y):
+        super(Symbol, self).__init__(patch,
+                                     'symbolatom %i %i' % (x, y),
+                                     x, y)
 
 class Comment(Box):
-    def __init__(self, value, x, y):
-        super(Comment, self).__init__(x, y)
+    def __init__(self, patch, value, x, y):
+        super(Comment, self).__init__(patch,
+                                      'text %i %i %s' % (x, y, value),
+                                      x, y)
         self.value = value
-        self.fudi_msg = 'text %i %i %s' % (x, y, value)
 
 class GUI(Box):
     pass
