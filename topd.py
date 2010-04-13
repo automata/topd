@@ -1,20 +1,20 @@
 import socket
 
-class Box:
+class Box(object):
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
 class Object(Box):
     def __init__(self, name, arguments, x, y):
-        Box.__init__(self, x, y)
+        super(Object, self).__init__(x, y)
         self.name = name
         self.arguments = arguments
         self.fudi_msg = 'obj %i %i %s %s' % (x, y, name, arguments)
 
 class Message(Box):
     def __init__(self, value, x, y):
-        Box.__init__(self, x, y)
+        super(Message, self).__init__(x, y)
         self.value = value
         self.fudi_msg = 'msg %i %i %s' % (x, y, value)
 
