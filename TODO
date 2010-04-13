@@ -1,4 +1,79 @@
 * to create the rest of FUDI messages (jeraman's dynamic patching research)
+    boxes
+        [x] obj create
+        [ ] obj edit
+        [x] obj move
+        [x] obj remove
+        [x] msg click
+        [x] msg create
+        [ ] msg edit
+        [x] msg move
+        [x] msg remove
+        [x] number create
+        [ ] number edit
+        [x] number move
+        [x] number remove
+        [x] symbol create
+        [x] symbol move
+        [x] symbol remove
+        [x] text create
+        [ ] text edit
+        [x] text move
+        [x] text remove
+    connections
+        [x] connect
+        [x] disconnect
+    gui
+        [ ] array properties
+        [ ] graph array create
+        [ ] graph properties
+        [ ] bang click
+        [ ] bang create
+        [ ] bang properties
+        [ ] toggle click
+        [ ] toggle properties
+        [ ] toggle create
+        [ ] number2 create
+        [ ] number2 edit
+        [ ] number2 properties
+        [ ] vslider create
+        [ ] vslider edit
+        [ ] vslider properties
+        [ ] hslider create
+        [ ] hslider edit
+        [ ] hslider properties
+        [ ] vradio create
+        [ ] vradio edit
+        [ ] vradio properties
+        [ ] hradio create
+        [ ] hradio edit
+        [ ] hradio properties
+        [ ] vu create
+        [ ] vu properties
+        [ ] canvas create
+        [ ] canvas properties
+    file menu
+        [ ] close file
+        [ ] new file
+        [ ] open file
+        [ ] save file
+    edit menu
+        [ ] copy and paste
+        [ ] cut
+        [ ] duplicate
+        [ ] editmode
+        [ ] select all
+    find menu
+        [ ] find
+    media menu
+        [ ] audio on off
+        [ ] audio settings
+        [ ] load meter
+        [ ] midi settings
+        [ ] test audio and midi
+    subpatches
+        [ ] subpatch create
+        [ ] subpatch remove
 * to document
 * to create an OSC interface to FUDI messages
 * to integrate with PyMT (@alfakini :-D)
