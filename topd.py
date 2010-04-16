@@ -48,6 +48,8 @@ class Box(object):
                           (self.patch.filename,
                            self.patch.boxes.index(self) + 1, source_outlet,
                            self.patch.boxes.index(target_box) + 1, target_inlet))
+        c = Connection(self, source_outlet, target_box, target_inlet)
+        self.patch.connections.append(c)
 
     def disconnect(self, source_outlet, target_box, target_inlet):
         self.patch.editmode(1)
@@ -55,6 +57,13 @@ class Box(object):
                           (self.patch.filename,
                            self.patch.boxes.index(self) + 1, source_outlet,
                            self.patch.boxes.index(target_box) + 1, target_inlet))
+        for c in self.patch.connections:
+            if ((c.source_box == self) and
+                (c.source_outlet == source_outlet) and
+                (c.target_box == target_box) and
+                (c.target_inlet == target_inlet)):
+                break
+        self.patch.connections.remove(c)
 
 
 class Object(Box):
@@ -95,12 +104,20 @@ class Comment(Box):
 class GUI(Box):
     pass
 
+class Connection(object):
+    def __init__(self, source_box, source_outlet, target_box, target_inlet):
+        self.source_box = source_box
+        self.source_outlet = source_outlet
+        self.target_box = target_box
+        self.target_inlet = target_inlet
+
 class Patch(object):
     def __init__(self, filename='recebe.pd', hostname='localhost', port=3006):
         self.filename = filename
         self.hostname = hostname
         self.port = port
         self.boxes = []
+        self.connections = []
         self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.s.connect((hostname, port))
 
