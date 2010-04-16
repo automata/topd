@@ -1,23 +1,23 @@
 * to create the rest of FUDI messages (jeraman's dynamic patching research)
     boxes
         [x] obj create
-        [ ] obj edit
+        [x] obj edit
         [x] obj move
         [x] obj remove
         [x] msg click
         [x] msg create
-        [ ] msg edit
+        [x] msg edit
         [x] msg move
         [x] msg remove
         [x] number create
-        [ ] number edit
+        [x] number edit
         [x] number move
         [x] number remove
         [x] symbol create
         [x] symbol move
         [x] symbol remove
         [x] text create
-        [ ] text edit
+        [x] text edit
         [x] text move
         [x] text remove
     connections
@@ -74,6 +74,7 @@
     subpatches
         [ ] subpatch create
         [ ] subpatch remove
+* to test
 * to document
 * to create an OSC interface to FUDI messages
 * to integrate with PyMT (@alfakini :-D)
