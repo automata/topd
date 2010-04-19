@@ -1,3 +1,4 @@
+* to analize the examples of dynamic patching from puredata manuals
 * to create the rest of FUDI messages (jeraman's dynamic patching research)
     boxes
         [x] obj create
