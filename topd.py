@@ -140,8 +140,14 @@ class Patch(object):
         self.port = port
         self.boxes = []
         self.connections = []
-        self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.s.connect((hostname, port))
+        try: 
+            self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            self.s.connect((hostname, port))
+        except socket.error, (value, message):
+            if self.s:
+                self.s.close()
+            print 'Could not connect to patch %s at %s:%s' % (filename, hostname, port)
+            print 'Socket error:', message 
 
     def __str__(self):
         str = 'Remote patch %s connected at %s:%i.\n\n' % (self.filename, self.hostname, self.port)
