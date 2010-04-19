@@ -10,8 +10,8 @@ p = Patch('recebe.pd', 'localhost', 3006)
 # creates some boxes
 # cria algumas caixas
 msg = Message(p, '220', 100, 10)
-osc = Object(p, 'osc~', '440', 100, 100)
-dac = Object(p, 'dac~', '', 100, 200)
+osc = Object(p, 'osc~ 440', 100, 100)
+dac = Object(p, 'dac~', 100, 200)
 
 # connect the boxes
 # conecta as caixas
