@@ -28,30 +28,30 @@
         [ ] array properties
         [ ] graph array create
         [ ] graph properties
-        [ ] bang click
-        [ ] bang create
+        [x] bang click
+        [x] bang create
         [ ] bang properties
-        [ ] toggle click
+        [x] toggle click: (on,off)
         [ ] toggle properties
-        [ ] toggle create
-        [ ] number2 create
+        [x] toggle create
+        [x] number2 create
         [ ] number2 edit
         [ ] number2 properties
-        [ ] vslider create
-        [ ] vslider edit
+        [x] vslider create
+        [x] vslider edit: (increment,decrement)
         [ ] vslider properties
-        [ ] hslider create
-        [ ] hslider edit
+        [x] hslider create
+        [x] hslider edit
         [ ] hslider properties
-        [ ] vradio create
+        [x] vradio create
         [ ] vradio edit
         [ ] vradio properties
-        [ ] hradio create
+        [x] hradio create
         [ ] hradio edit
         [ ] hradio properties
-        [ ] vu create
+        [x] vu create
         [ ] vu properties
-        [ ] canvas create
+        [x] canvas create
         [ ] canvas properties
     file menu
         [ ] close file: menuclose
@@ -75,7 +75,7 @@
         [ ] find again: findagain
         [ ] find parent: findparent
     media menu
-        [ ] audio on off
+        [x] audio on off
         [ ] audio settings
         [ ] load meter
         [ ] midi settings
@@ -86,7 +86,7 @@
     windows controller
         [ ] stretch 
     pd
-        [ ] dsp (1,0)
+        [x] dsp (1,0)
         [ ] quit: quit
 * to test
 * to document
