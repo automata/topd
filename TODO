@@ -54,18 +54,26 @@
         [ ] canvas create
         [ ] canvas properties
     file menu
-        [ ] close file
-        [ ] new file
-        [ ] open file
-        [ ] save file
+        [ ] close file: menuclose
+        [ ] new file: 
+        [ ] open file: 
+        [ ] save file: menusave
+        [ ] save as: menusaveas
     edit menu
-        [ ] copy and paste
-        [ ] cut
-        [ ] duplicate
-        [ ] editmode
-        [ ] select all
+        [ ] copy: copy
+        [ ] paste: paste
+        [ ] cut: cut
+        [ ] duplicate: duplicate
+        [x] editmode: editmode (0,1)
+        [ ] vis: vis (0,1)
+        [ ] tidy: tidy
+        [ ] texteditor: texteditor
+        [ ] font: menufont e font x 100 100 (x=8,10,12,16,24,36)
+        [ ] select all: selectall
     find menu
-        [ ] find
+        [ ] find: find test
+        [ ] find again: findagain
+        [ ] find parent: findparent
     media menu
         [ ] audio on off
         [ ] audio settings
@@ -75,6 +83,11 @@
     subpatches
         [ ] subpatch create
         [ ] subpatch remove
+    windows controller
+        [ ] stretch 
+    pd
+        [ ] dsp (1,0)
+        [ ] quit: quit
 * to test
 * to document
 * to create an OSC interface to FUDI messages

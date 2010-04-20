@@ -21,4 +21,4 @@ osc.connect(0, dac, 1)
 
 # turn on the audio
 # liga o audio
-p.dsp(1)
+p.dsp(True)

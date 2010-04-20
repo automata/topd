@@ -1,5 +1,7 @@
 import socket
 
+# boxes #######################################################################
+
 class Box(object):
     def __init__(self, patch, fudi_token, label, x, y):
         self.x = x
@@ -8,11 +10,10 @@ class Box(object):
         self.fudi_token = fudi_token
         self.label = label
         self.patch.boxes.append(self)
-        self.patch.editmode(1)
+        self.patch.editmode(True)
         self.patch.send('%s %i %i %s' % (fudi_token, x, y, label))
 
     def delete(self):
-        #self.patch.editmode(1)
         self.patch.send('mouse %i %i 1 0' % (self.x - 1, self.y - 1))
         self.patch.send('motion %i %i 0' % (self.x + 1, self.y + 1))
         self.patch.send('mouseup %i %i 1 0' % (self.x + 1, self.y + 1))
@@ -23,7 +24,6 @@ class Box(object):
         return 'Hi... I am a box :-P'
 
     def move(self, x, y):
-        #self.patch.editmode(1)
         self.patch.send('mouse %i %i 1 0' % (self.x + 1, self.y + 1))
         self.patch.send('motion %i %i 0' % (x, y))
         self.patch.send('mouseup %i %i 1 0' % (x, y))
@@ -34,7 +34,6 @@ class Box(object):
         self.patch.boxes[self.patch.boxes.index(self)] = self
 
     def click(self):
-        #self.patch.editmode(0)
         self.patch.send('mouse %i %i 1 0' % (self.x + 1, self.y + 1))
         self.patch.send('mouseup %i %i 1 0' % (self.x + 1, self.y + 1))
 
@@ -46,23 +45,19 @@ class Box(object):
             self.patch.send('key 1 %i 0' % ord(c))
             self.patch.send('key 0 %i 0' % ord(c))
 
-        # precisa atualizar a lista de boxes?! e as connections?!
         self.unselect()
         self.label = label
 
     def select(self):
-        #self.patch.editmode(1)
         self.patch.send('mouse %i %i 1 0' % (self.x - 2, self.y - 2))
         self.patch.send('motion %i %i 0' % (self.x + 1, self.y + 1))
         self.patch.send('mouseup %i %i 1 0' % (self.x + 1, self.y + 1))
 
     def unselect(self):
-        #self.patch.editmode(1)
         self.patch.send('mouse %i %i 1 0' % (self.x - 1, self.y - 1))
         self.patch.send('mouseup %i %i 1 0' % (self.x - 1, self.y - 1))
 
     def connect(self, source_outlet, target_box, target_inlet):
-        #self.patch.editmode(1)
         self.patch.send('connect %i %i %i %i' %
                         (self.patch.boxes.index(self) + 1, source_outlet,
                          self.patch.boxes.index(target_box) + 1, target_inlet))
@@ -70,7 +65,6 @@ class Box(object):
         self.patch.connections.append(c)
 
     def disconnect(self, source_outlet, target_box, target_inlet):
-        #self.patch.editmode(1)
         self.patch.send('disconnect %i %i %i %i' %
                         (self.patch.boxes.index(self) + 1, source_outlet,
                          self.patch.boxes.index(target_box) + 1, target_inlet))
@@ -120,8 +114,75 @@ class Comment(Box):
     def __str__(self):
         return '" %s "' % self.label
 
-class GUI(Box):
-    pass
+class GUI(Object):
+    def __init__(self, patch, label, x, y):
+        super(GUI, self).__init__(patch, label, x, y)
+
+    # FIXME: to add common GUI properties here: color, label, ...
+
+class Bang(GUI):
+    def __init__(self, patch, x, y):
+        super(Bang, self).__init__(patch, 'bng', x, y)
+
+class Slider(GUI):
+    def __init__(self, patch, x, y):
+        super(Slider, self).__init__(patch, label, x, y)
+        self.value = 0
+        self.min = 0
+        self.max = 127
+
+    def increment(self, step=1):
+        if value < self.max:
+            self.value += step
+        
+    def decrement(self, step=1):
+        if value > self.min:
+            self.value -= step
+
+class HSlider(Slider):
+    def __init__(self, patch, x, y):
+        super(HSlider, self).__init__(patch, 'hsl', x, y)
+
+class VSlider(Slider):
+    def __init__(self, patch, x, y):
+        super(VSlider, self).__init__(patch, 'vsl', x, y)
+
+class Toggle(GUI):
+    def __init__(self, patch, x, y):
+        super(Toggle, self).__init__(patch, 'tgl', x, y)
+        self.state = False
+
+    def on(self):
+        self.state = True
+
+    def off(self):
+        self.state = False
+
+class Number2(GUI):
+    def __init__(self, patch, x, y):
+        super(Number2, self).__init__(patch, 'nbx', x, y)
+
+class Radio(GUI):
+    def __init__(self, patch, x, y):
+        super(Radio, self).__init__(patch, label, x, y)
+
+class VRadio(Radio):
+    def __init__(self, patch, x, y):
+        super(VRadio, self).__init__(patch, 'vradio', x, y)
+
+class HRadio(Radio):
+    def __init__(self, patch, x, y):
+        super(HRadio, self).__init__(patch, 'hradio', x, y)
+
+class VU(GUI):
+    def __init__(self, patch, x, y):
+        super(VU, self).__init__(patch, 'vu', x, y)
+
+class Canvas(GUI):
+    def __init__(self, patch, x, y):
+        super(Canvas, self).__init__(patch, 'cnv', x, y)
+
+# connections #################################################################
 
 class Connection(object):
     def __init__(self, source_box, source_outlet, target_box, target_inlet):
@@ -132,6 +193,8 @@ class Connection(object):
 
     def __str__(self):
         return '%s %i->%i %s' % (self.source_box.__str__(), self.source_outlet, self.target_inlet, self.target_box.__str__())
+
+# patch #######################################################################
 
 class Patch(object):
     def __init__(self, filename='recebe.pd', hostname='localhost', port=3006):
@@ -166,10 +229,16 @@ class Patch(object):
         return str
 
     def editmode(self, state):
-        self.send('editmode %i' % state)
+        if state:
+            self.send('editmode 1')
+        else:
+            self.send('editmode 0')
         
     def dsp(self, state):
-        self.s.send('pd dsp %i;' % state)
+        if state:
+            self.s.send('pd dsp 1;')
+        else:
+            self.s.send('pd dsp 0;')
 
     def send(self, fudi_msg):
         self.s.send('pd-%s %s;' % (self.filename, fudi_msg))

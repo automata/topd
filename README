@@ -35,10 +35,10 @@
    dac = Object(p, 'dac~', 100, 200)
    osc.connect(0, dac, 0)
    osc.connect(0, dac, 1)
-   p.dsp(1)
+   p.dsp(True)
    osc.disconnect(0, dac, 0)
    osc.delete()
-   p.dsp(0)
+   p.dsp(False)
 
 [*==] or something more excentric...
 [<o>] ou algo mais excêntrico...
