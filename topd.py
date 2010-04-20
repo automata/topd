@@ -95,14 +95,14 @@ class Message(Box):
 
 class Number(Box):
     def __init__(self, patch, x, y):
-        super(Number, self).__init__(patch, 'floatatom', x, y)
+        super(Number, self).__init__(patch, 'floatatom', '', x, y)
 
     def __str__(self):
         return 'Hi... I am a number ;-)'
 
 class Symbol(Box):
     def __init__(self, patch, x, y):
-        super(Symbol, self).__init__(patch, 'symbolatom', x, y)
+        super(Symbol, self).__init__(patch, 'symbolatom', '', x, y)
 
     def __str__(self):
         return 'Hi... I am a symbol ;-)'
@@ -124,28 +124,76 @@ class Bang(GUI):
     def __init__(self, patch, x, y):
         super(Bang, self).__init__(patch, 'bng', x, y)
 
-class Slider(GUI):
+    def bang(self):
+        self.patch.editmode(False)
+        self.click()
+        self.patch.editmode(True)
+
+class HSlider(GUI):
     def __init__(self, patch, x, y):
-        super(Slider, self).__init__(patch, label, x, y)
+        super(HSlider, self).__init__(patch, 'hsl', x, y)
         self.value = 0
         self.min = 0
         self.max = 127
 
     def increment(self, step=1):
-        if value < self.max:
+        if self.value < self.max:
             self.value += step
+
+            self.patch.editmode(False)
+            self.patch.send('mouse %i %i 1 0' %
+                            (self.x + self.value, self.y + 1))
+            self.patch.send('motion %i %i 0' %
+                            (self.x + self.value + 1, self.y + 1))
+            self.patch.send('mouseup %i %i 0 1' %
+                            (self.x + self.value + 1, self.y + 1))
+            self.patch.editmode(True)
         
     def decrement(self, step=1):
-        if value > self.min:
+        if self.value > self.min:
             self.value -= step
 
-class HSlider(Slider):
-    def __init__(self, patch, x, y):
-        super(HSlider, self).__init__(patch, 'hsl', x, y)
+            self.patch.editmode(False)
+            self.patch.send('mouse %i %i 1 0' %
+                            (self.x + 1, self.y + 1))
+            self.patch.send('motion %i %i 0' %
+                            (self.x, self.y + 1))
+            self.patch.send('mouseup %i %i 0 1' %
+                            (self.x, self.y + 1))
+            self.patch.editmode(True)
 
-class VSlider(Slider):
+class VSlider(GUI):
     def __init__(self, patch, x, y):
         super(VSlider, self).__init__(patch, 'vsl', x, y)
+        self.value = 0
+        self.min = 0
+        self.max = 127
+
+    def increment(self, step=1):
+        if self.value < self.max:
+            self.value += step
+
+            self.patch.editmode(False)
+            self.patch.send('mouse %i %i 1 0' %
+                            (self.x + 1, self.y + 1))
+            self.patch.send('motion %i %i 0' %
+                            (self.x + 1, self.y))
+            self.patch.send('mouseup %i %i 0 1' %
+                            (self.x + 1, self.y))
+            self.patch.editmode(True)
+        
+    def decrement(self, step=1):
+        if self.value > self.min:
+            self.value -= step
+
+            self.patch.editmode(False)
+            self.patch.send('mouse %i %i 1 0' %
+                            (self.x + 1, self.y + self.value))
+            self.patch.send('motion %i %i 0' %
+                            (self.x + 1, self.y + self.value + 1))
+            self.patch.send('mouseup %i %i 0 1' %
+                            (self.x + 1, self.y + self.value + 1))
+            self.patch.editmode(True)
 
 class Toggle(GUI):
     def __init__(self, patch, x, y):
@@ -153,10 +201,22 @@ class Toggle(GUI):
         self.state = False
 
     def on(self):
-        self.state = True
+        if not self.state:
+            self.patch.editmode(False)
+            self.click()            
+            self.patch.editmode(True)
+            self.state = True
+        else:
+            print 'Warning! Toggle already ON.'
 
     def off(self):
-        self.state = False
+        if self.state:
+            self.patch.editmode(False)
+            self.click()            
+            self.patch.editmode(True)
+            self.state = False
+        else:
+            print 'Warning! Toggle already OFF.'
 
 class Number2(GUI):
     def __init__(self, patch, x, y):
