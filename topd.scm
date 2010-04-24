@@ -10,8 +10,6 @@
 (use tcp) ; to sockets
 (use srfi-13) ; to string-join
 
-; always connect to "recebe.pd" patch
-(define patch (patch-connect))
 
 ;; patch
 
@@ -104,3 +102,6 @@
 (define (space . strings-list)
   "Joins the list of strings with a space between them."
   (string-join strings-list " "))
+
+; always connect to "recebe.pd" patch
+(define patch (patch-connect))
