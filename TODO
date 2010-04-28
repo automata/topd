@@ -93,3 +93,7 @@
 * to create an OSC interface to FUDI messages
 * to integrate with PyMT (@alfakini :-D)
 * to research some domain specific languages ([osc~ 440] =0> [dac~])
+  - dseq (drum machine micro-language)
+    http://www.csounds.com/journal/issue8/dseq.html
+  - roll your own score syntax (python)
+    http://slipmat.noisepages.com/2010/04/roll-your-own-score-syntax/

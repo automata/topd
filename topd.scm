@@ -80,7 +80,14 @@
           (->string source)
           (->string outlet)
           (->string target)
-          (->string inlet))))
+          (->string inlet)))
+  (let ((con `(((id ,(+ 1 (length (cadr (assoc 'connections patch))))) 
+                (source ,source) 
+                (outlet ,outlet) 
+                (target ,target) 
+                (inlet ,inlet)))))
+    (set! (cadr (assoc 'connections patch)) (append (cadr (assoc 'connections patch)) con))
+    (car con)))
 
 ;; now begins the real fun! a DSL to patching...
 
