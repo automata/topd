@@ -1,62 +1,88 @@
-~~~ ->pd ~~~
+###############################################################################
 
-[*==] a simple python interface to pure data...
-[<o>] uma interface simples em python para pure data...
+    ->pd 0.1    A simple (Python|Scheme) Interface to Pure Data
 
-~~~ testing / testando ~~~
+###############################################################################
 
-[*==] run test.sh
-[<o>] rode test.sh
+1. Requisites
 
-~~~ hacking / hackeando ~~~
+To use ->pd you need:
 
-[*==] open test.py... 
-[<o>] abra test.py...
+    - Pure Data: $ sudo aptitude install puredata
+    - Python:    $ sudo aptitude install python
 
-[*==] or try something like this on you python interpreter...
-[<o>] ou tente algo parecido com isso em um interpretador python...
+If you want to use the Scheme version of ->pd, you will also need:
 
-[*==] first... run pd...
-[<o>] primeiro... rode pd...
+    - Chicken Scheme: $ sudo aptitude install chicken-bin
 
-   $ pd recebe.pd &
+If you want to use the OSC handler of ->pd, you will need:
 
-[*==] then... run python...
-[<o>] então... rode python...
+    - pyOSC: $ git clone git://gitorious.org/pyosc/devel.git
+             $ cd devel
+             $ sudo ./setup.py install
 
-   $ python
+2. Intallation
+ 
+Download the latest ->pd version at github.com:
 
-[*==] line by line... with python on a window and recebe.pd on another...
-[<o>] linha por linha... com python em uma janela e recebe.pd em outra...
+    $ git clone git://github.com/automata/topd.git
+    $ cd topd
 
-   from topd import *
-   p = Patch()
-   osc = Object(p, 'osc~ 440', 100, 100)
-   dac = Object(p, 'dac~', 100, 200)
-   osc.connect(0, dac, 0)
-   osc.connect(0, dac, 1)
-   p.dsp(True)
-   osc.disconnect(0, dac, 0)
-   osc.delete()
-   p.dsp(False)
+3. Testing
 
-[*==] or something more excentric...
-[<o>] ou algo mais excêntrico...
+Run the test.sh to a fast test:
 
-   from topd import *
-   from random import randint
-   p = Patch()
-   dac = Object(p, 'dac~', 250, 250)
-   for i in range(0, 500):
-       o = Object('osc~ ' + str(i), randint(0, 500), randint(0, 500))
-       o.connect(0, dac, 0)
-       o.connect(0, dac, 1)
+    $ ./test.sh
 
-[*==] hope you enjoy...
-[<o>] espero que você se divirta...
+4. Using
 
-~~~ contributing / contribuindo ~~~
+Run Pure Data:
 
-http://automata.cc
+    $ pd receive.pd &
 
-vilson@void.cc
+Run your Python interpreter:
+
+    $ python
+    
+Import ->pd:
+
+    >>> from topd import *
+
+Create a "virtual" patch (a connection to receive.pd patch):
+
+    >>> p = Patch('receive.pd', 'localhost', 4242)
+
+Create some PD objects:
+
+    >>> osc = Object(p, 'osc~ 440')
+
+You can optionally specify x, y position of the object in the patch:
+
+    >>> dac = Object(p, 'dac~', 100, 200)
+
+Connect them (note the use of inlets/outlets numbers):
+
+    >>> osc.connect(0, dac, 0)
+    >>> osc.connect(0, dac, 1)
+
+Turn on the DSP:   
+
+    >>> p.dsp(True)
+
+Disconnect them:
+
+    >>> osc.disconnect(0, dac, 0)
+    >>> osc.disconnect(0, dac, 1)
+
+Delete them:
+
+    >>> osc.delete()
+    >>> dac.delete()
+
+Hack free and enjoy!
+
+5. Contributing
+
+Please, send an email to vilson@void.cc.
+
+~ http://automata.cc

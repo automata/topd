@@ -5,7 +5,7 @@ from topd import *
 
 # creates a 'virtual' patch, connecting to a pd instance (running recebe.pd)
 # cria um patch 'virtual', conectando-o a uma instancia de pd (rodando recebe.pd)
-p = Patch('recebe.pd', 'localhost', 3006)
+p = Patch('recebe.pd', 'localhost', 4242)
 
 # creates some boxes
 # cria algumas caixas
