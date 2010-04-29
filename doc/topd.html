@@ -1,0 +1,1870 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module topd</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>topd</strong></big></big> (version 0.1)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/vilson/meu-src/topd/topd.py">/home/vilson/meu-src/topd/topd.py</a></font></td></tr></table>
+    <p><tt>-&gt;pd&nbsp;-&nbsp;A&nbsp;Simple&nbsp;(Python|Scheme)&nbsp;Interface&nbsp;to&nbsp;Pure&nbsp;Data</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="socket.html">socket</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="topd.html#Box">Box</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="topd.html#Comment">Comment</a>
+</font></dt><dt><font face="helvetica, arial"><a href="topd.html#Message">Message</a>
+</font></dt><dt><font face="helvetica, arial"><a href="topd.html#Number">Number</a>
+</font></dt><dt><font face="helvetica, arial"><a href="topd.html#Object">Object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="topd.html#GUI">GUI</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="topd.html#Bang">Bang</a>
+</font></dt><dt><font face="helvetica, arial"><a href="topd.html#Canvas">Canvas</a>
+</font></dt><dt><font face="helvetica, arial"><a href="topd.html#HSlider">HSlider</a>
+</font></dt><dt><font face="helvetica, arial"><a href="topd.html#Number2">Number2</a>
+</font></dt><dt><font face="helvetica, arial"><a href="topd.html#Radio">Radio</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="topd.html#HRadio">HRadio</a>
+</font></dt><dt><font face="helvetica, arial"><a href="topd.html#VRadio">VRadio</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="topd.html#Toggle">Toggle</a>
+</font></dt><dt><font face="helvetica, arial"><a href="topd.html#VSlider">VSlider</a>
+</font></dt><dt><font face="helvetica, arial"><a href="topd.html#VU">VU</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="topd.html#Symbol">Symbol</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="topd.html#Connection">Connection</a>
+</font></dt><dt><font face="helvetica, arial"><a href="topd.html#Patch">Patch</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Bang">class <strong>Bang</strong></a>(<a href="topd.html#GUI">GUI</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#Bang">Bang</a></dd>
+<dd><a href="topd.html#GUI">GUI</a></dd>
+<dd><a href="topd.html#Object">Object</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Bang-__init__"><strong>__init__</strong></a>(self, patch, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Bang-bang"><strong>bang</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Object">Object</a>:<br>
+<dl><dt><a name="Bang-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440')<br>
+print&nbsp;osc<br>
+[&nbsp;osc~&nbsp;440&nbsp;]</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="Bang-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Bang-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="Bang-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Bang-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Bang-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="Bang-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Bang-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="Bang-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#Bang-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Bang-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Bang-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="Bang-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Bang-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="Bang-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Bang-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="Bang-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Bang-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="Bang-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Bang-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Box">class <strong>Box</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Mother&nbsp;of&nbsp;all&nbsp;PD&nbsp;elements&nbsp;(boxes).&nbsp;All&nbsp;the&nbsp;main&nbsp;operations&nbsp;are&nbsp;done&nbsp;here<br>
+sending&nbsp;FUDI&nbsp;messages&nbsp;to&nbsp;PD.<br>
+&nbsp;<br>
+Attributes:<br>
+patch&nbsp;--&nbsp;the&nbsp;'virtual'&nbsp;<a href="#Patch">Patch</a><br>
+fudi_token&nbsp;--&nbsp;the&nbsp;FUDI&nbsp;type&nbsp;(obj,&nbsp;msg,&nbsp;nmb,&nbsp;...)<br>
+label&nbsp;--&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box&nbsp;(osc~&nbsp;440,&nbsp;dac~,&nbsp;...)<br>
+x&nbsp;--&nbsp;box's&nbsp;x&nbsp;coordinate&nbsp;in&nbsp;the&nbsp;patch<br>
+y&nbsp;--&nbsp;box's&nbsp;y&nbsp;coordinate&nbsp;in&nbsp;the&nbsp;patch<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Box-__init__"><strong>__init__</strong></a>(self, patch, fudi_token, label, x, y)</dt><dd><tt>Builds&nbsp;a&nbsp;box,&nbsp;initializing&nbsp;arguments&nbsp;and&nbsp;sending&nbsp;a&nbsp;FUDI&nbsp;message&nbsp;do&nbsp;PD,<br>
+creating&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;box&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;boxes&nbsp;list&nbsp;too.</tt></dd></dl>
+
+<dl><dt><a name="Box-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;box&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).</tt></dd></dl>
+
+<dl><dt><a name="Box-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Box-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="Box-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Box-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Box-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="Box-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Box-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="Box-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#Box-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Box-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Box-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="Box-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Box-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="Box-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Box-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="Box-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Box-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="Box-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Box-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Canvas">class <strong>Canvas</strong></a>(<a href="topd.html#GUI">GUI</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#Canvas">Canvas</a></dd>
+<dd><a href="topd.html#GUI">GUI</a></dd>
+<dd><a href="topd.html#Object">Object</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Canvas-__init__"><strong>__init__</strong></a>(self, patch, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Object">Object</a>:<br>
+<dl><dt><a name="Canvas-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440')<br>
+print&nbsp;osc<br>
+[&nbsp;osc~&nbsp;440&nbsp;]</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="Canvas-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Canvas-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="Canvas-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Canvas-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Canvas-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="Canvas-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Canvas-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="Canvas-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#Canvas-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Canvas-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Canvas-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="Canvas-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Canvas-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="Canvas-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Canvas-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="Canvas-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Canvas-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="Canvas-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Canvas-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Comment">class <strong>Comment</strong></a>(<a href="topd.html#Box">Box</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Defines&nbsp;the&nbsp;text&nbsp;(comment)&nbsp;elements&nbsp;of&nbsp;PD.<br>
+&nbsp;<br>
+Attributes:<br>
+patch&nbsp;--&nbsp;the&nbsp;'virtual'&nbsp;<a href="#Patch">Patch</a><br>
+label&nbsp;--&nbsp;the&nbsp;comment&nbsp;content<br>
+x&nbsp;--&nbsp;box's&nbsp;x&nbsp;coordinate&nbsp;in&nbsp;the&nbsp;patch&nbsp;(optional)<br>
+y&nbsp;--&nbsp;box's&nbsp;y&nbsp;coordinate&nbsp;in&nbsp;the&nbsp;patch&nbsp;(optional)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#Comment">Comment</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Comment-__init__"><strong>__init__</strong></a>(self, patch, label, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt><dd><tt>Creates&nbsp;a&nbsp;comment&nbsp;at&nbsp;x&nbsp;and&nbsp;y&nbsp;position.<br>
+&nbsp;<br>
+The&nbsp;x&nbsp;and&nbsp;y&nbsp;coordinates&nbsp;are&nbsp;optional.&nbsp;If&nbsp;you&nbsp;don't&nbsp;give&nbsp;one,&nbsp;a<br>
+free&nbsp;space&nbsp;in&nbsp;the&nbsp;patch&nbsp;will&nbsp;be&nbsp;used.<br>
+&nbsp;<br>
+Example:<br>
+p&nbsp;=&nbsp;<a href="#Patch">Patch</a>()<br>
+comment&nbsp;=&nbsp;<a href="#Comment">Comment</a>(p,&nbsp;'foo&nbsp;bar&nbsp;baz',&nbsp;100,&nbsp;100)&nbsp;<br>
+c&nbsp;=&nbsp;<a href="#Comment">Comment</a>(p,&nbsp;':-)')</tt></dd></dl>
+
+<dl><dt><a name="Comment-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;comment&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+comment&nbsp;=&nbsp;<a href="#Comment">Comment</a>(p,&nbsp;'foo&nbsp;bar&nbsp;baz')<br>
+print&nbsp;comment<br>
+"&nbsp;foo&nbsp;bar&nbsp;baz&nbsp;"</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="Comment-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Comment-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="Comment-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Comment-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Comment-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="Comment-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Comment-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="Comment-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#Comment-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Comment-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Comment-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="Comment-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Comment-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="Comment-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Comment-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="Comment-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Comment-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="Comment-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Comment-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Connection">class <strong>Connection</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Connection-__init__"><strong>__init__</strong></a>(self, source_box, source_outlet, target_box, target_inlet)</dt></dl>
+
+<dl><dt><a name="Connection-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GUI">class <strong>GUI</strong></a>(<a href="topd.html#Object">Object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#GUI">GUI</a></dd>
+<dd><a href="topd.html#Object">Object</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="GUI-__init__"><strong>__init__</strong></a>(self, patch, label, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Object">Object</a>:<br>
+<dl><dt><a name="GUI-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440')<br>
+print&nbsp;osc<br>
+[&nbsp;osc~&nbsp;440&nbsp;]</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="GUI-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#GUI-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="GUI-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#GUI-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#GUI-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="GUI-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#GUI-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="GUI-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#GUI-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#GUI-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#GUI-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="GUI-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#GUI-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="GUI-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#GUI-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="GUI-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#GUI-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="GUI-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#GUI-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="HRadio">class <strong>HRadio</strong></a>(<a href="topd.html#Radio">Radio</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#HRadio">HRadio</a></dd>
+<dd><a href="topd.html#Radio">Radio</a></dd>
+<dd><a href="topd.html#GUI">GUI</a></dd>
+<dd><a href="topd.html#Object">Object</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="HRadio-__init__"><strong>__init__</strong></a>(self, patch, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Object">Object</a>:<br>
+<dl><dt><a name="HRadio-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440')<br>
+print&nbsp;osc<br>
+[&nbsp;osc~&nbsp;440&nbsp;]</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="HRadio-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#HRadio-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="HRadio-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#HRadio-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#HRadio-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="HRadio-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#HRadio-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="HRadio-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#HRadio-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#HRadio-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#HRadio-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="HRadio-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#HRadio-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="HRadio-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#HRadio-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="HRadio-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#HRadio-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="HRadio-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#HRadio-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="HSlider">class <strong>HSlider</strong></a>(<a href="topd.html#GUI">GUI</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#HSlider">HSlider</a></dd>
+<dd><a href="topd.html#GUI">GUI</a></dd>
+<dd><a href="topd.html#Object">Object</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="HSlider-__init__"><strong>__init__</strong></a>(self, patch, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="HSlider-decrement"><strong>decrement</strong></a>(self, step<font color="#909090">=1</font>)</dt></dl>
+
+<dl><dt><a name="HSlider-increment"><strong>increment</strong></a>(self, step<font color="#909090">=1</font>)</dt></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Object">Object</a>:<br>
+<dl><dt><a name="HSlider-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440')<br>
+print&nbsp;osc<br>
+[&nbsp;osc~&nbsp;440&nbsp;]</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="HSlider-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#HSlider-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="HSlider-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#HSlider-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#HSlider-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="HSlider-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#HSlider-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="HSlider-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#HSlider-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#HSlider-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#HSlider-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="HSlider-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#HSlider-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="HSlider-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#HSlider-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="HSlider-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#HSlider-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="HSlider-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#HSlider-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Message">class <strong>Message</strong></a>(<a href="topd.html#Box">Box</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Defines&nbsp;the&nbsp;msg&nbsp;(messages)&nbsp;elements&nbsp;of&nbsp;PD.<br>
+&nbsp;<br>
+Attributes:<br>
+patch&nbsp;--&nbsp;the&nbsp;'virtual'&nbsp;<a href="#Patch">Patch</a><br>
+label&nbsp;--&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box&nbsp;(osc~&nbsp;440,&nbsp;dac~,&nbsp;...)<br>
+x&nbsp;--&nbsp;box's&nbsp;x&nbsp;coordinate&nbsp;in&nbsp;the&nbsp;patch&nbsp;(optional)<br>
+y&nbsp;--&nbsp;box's&nbsp;y&nbsp;coordinate&nbsp;in&nbsp;the&nbsp;patch&nbsp;(optional)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#Message">Message</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Message-__init__"><strong>__init__</strong></a>(self, patch, label, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt><dd><tt>Creates&nbsp;a&nbsp;msg&nbsp;box&nbsp;with&nbsp;label&nbsp;as&nbsp;content&nbsp;at&nbsp;x&nbsp;and&nbsp;y&nbsp;position.<br>
+&nbsp;<br>
+The&nbsp;x&nbsp;and&nbsp;y&nbsp;coordinates&nbsp;are&nbsp;optional.&nbsp;If&nbsp;you&nbsp;don't&nbsp;give&nbsp;one,&nbsp;a<br>
+free&nbsp;space&nbsp;in&nbsp;the&nbsp;patch&nbsp;will&nbsp;be&nbsp;used.<br>
+&nbsp;<br>
+Example:<br>
+p&nbsp;=&nbsp;<a href="#Patch">Patch</a>()<br>
+bang&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+foo&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'foo&nbsp;bar&nbsp;baz')</tt></dd></dl>
+
+<dl><dt><a name="Message-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;message&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+bang&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang')<br>
+print&nbsp;bang<br>
+[&nbsp;bang&nbsp;(</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="Message-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Message-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="Message-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Message-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Message-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="Message-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Message-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="Message-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#Message-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Message-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Message-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="Message-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Message-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="Message-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Message-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="Message-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Message-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="Message-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Message-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Number">class <strong>Number</strong></a>(<a href="topd.html#Box">Box</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Defines&nbsp;the&nbsp;floatatom&nbsp;(numbers)&nbsp;elements&nbsp;of&nbsp;PD.<br>
+&nbsp;<br>
+Attributes:<br>
+patch&nbsp;--&nbsp;the&nbsp;'virtual'&nbsp;<a href="#Patch">Patch</a><br>
+value&nbsp;--&nbsp;the&nbsp;current&nbsp;number&nbsp;value<br>
+x&nbsp;--&nbsp;box's&nbsp;x&nbsp;coordinate&nbsp;in&nbsp;the&nbsp;patch&nbsp;(optional)<br>
+y&nbsp;--&nbsp;box's&nbsp;y&nbsp;coordinate&nbsp;in&nbsp;the&nbsp;patch&nbsp;(optional)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#Number">Number</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Number-__init__"><strong>__init__</strong></a>(self, patch, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt><dd><tt>Creates&nbsp;a&nbsp;number&nbsp;box&nbsp;at&nbsp;x&nbsp;and&nbsp;y&nbsp;position.<br>
+&nbsp;<br>
+The&nbsp;x&nbsp;and&nbsp;y&nbsp;coordinates&nbsp;are&nbsp;optional.&nbsp;If&nbsp;you&nbsp;don't&nbsp;give&nbsp;one,&nbsp;a<br>
+free&nbsp;space&nbsp;in&nbsp;the&nbsp;patch&nbsp;will&nbsp;be&nbsp;used.<br>
+&nbsp;<br>
+Example:<br>
+p&nbsp;=&nbsp;<a href="#Patch">Patch</a>()<br>
+nmb&nbsp;=&nbsp;<a href="#Number">Number</a>(p,&nbsp;100,&nbsp;100)&nbsp;<br>
+n&nbsp;=&nbsp;<a href="#Number">Number</a>(p)</tt></dd></dl>
+
+<dl><dt><a name="Number-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;number&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+nmb&nbsp;=&nbsp;<a href="#Number">Number</a>(p)<br>
+print&nbsp;nmb<br>
+[&nbsp;0&nbsp;`|</tt></dd></dl>
+
+<dl><dt><a name="Number-decrement"><strong>decrement</strong></a>(self, step<font color="#909090">=1</font>)</dt><dd><tt>Decrements&nbsp;by&nbsp;a&nbsp;step&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;number&nbsp;element.<br>
+&nbsp;<br>
+Example:<br>
+nmb&nbsp;=&nbsp;<a href="#Number">Number</a>(p)<br>
+print&nbsp;nmb<br>
+[&nbsp;0&nbsp;`|<br>
+nmb.<a href="#Number-decrement">decrement</a>()<br>
+print&nbsp;nmb<br>
+[&nbsp;-1&nbsp;`|</tt></dd></dl>
+
+<dl><dt><a name="Number-increment"><strong>increment</strong></a>(self, step<font color="#909090">=1</font>)</dt><dd><tt>Increments&nbsp;by&nbsp;a&nbsp;step&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;number&nbsp;element.<br>
+&nbsp;<br>
+Example:<br>
+nmb&nbsp;=&nbsp;<a href="#Number">Number</a>(p)<br>
+print&nbsp;nmb<br>
+[&nbsp;0&nbsp;`|<br>
+nmb.<a href="#Number-increment">increment</a>()<br>
+print&nbsp;nmb<br>
+[&nbsp;1&nbsp;`|</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="Number-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Number-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="Number-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Number-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Number-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="Number-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Number-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="Number-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#Number-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Number-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Number-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="Number-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Number-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="Number-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Number-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="Number-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Number-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="Number-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Number-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Number2">class <strong>Number2</strong></a>(<a href="topd.html#GUI">GUI</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#Number2">Number2</a></dd>
+<dd><a href="topd.html#GUI">GUI</a></dd>
+<dd><a href="topd.html#Object">Object</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Number2-__init__"><strong>__init__</strong></a>(self, patch, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Object">Object</a>:<br>
+<dl><dt><a name="Number2-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440')<br>
+print&nbsp;osc<br>
+[&nbsp;osc~&nbsp;440&nbsp;]</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="Number2-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Number2-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="Number2-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Number2-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Number2-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="Number2-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Number2-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="Number2-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#Number2-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Number2-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Number2-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="Number2-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Number2-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="Number2-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Number2-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="Number2-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Number2-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="Number2-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Number2-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Object">class <strong>Object</strong></a>(<a href="topd.html#Box">Box</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Defines&nbsp;the&nbsp;obj&nbsp;(objects)&nbsp;elements&nbsp;of&nbsp;PD&nbsp;(osc~,&nbsp;dac~,&nbsp;phasor~,&nbsp;...).<br>
+&nbsp;<br>
+Attributes:<br>
+patch&nbsp;--&nbsp;the&nbsp;'virtual'&nbsp;<a href="#Patch">Patch</a><br>
+label&nbsp;--&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box&nbsp;(osc~&nbsp;440,&nbsp;dac~,&nbsp;...)<br>
+x&nbsp;--&nbsp;box's&nbsp;x&nbsp;coordinate&nbsp;in&nbsp;the&nbsp;patch&nbsp;(optional)<br>
+y&nbsp;--&nbsp;box's&nbsp;y&nbsp;coordinate&nbsp;in&nbsp;the&nbsp;patch&nbsp;(optional)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#Object">Object</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Object-__init__"><strong>__init__</strong></a>(self, patch, label, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt><dd><tt>Creates&nbsp;a&nbsp;obj&nbsp;box&nbsp;with&nbsp;label&nbsp;as&nbsp;content&nbsp;at&nbsp;x&nbsp;and&nbsp;y&nbsp;position.<br>
+&nbsp;<br>
+The&nbsp;x&nbsp;and&nbsp;y&nbsp;coordinates&nbsp;are&nbsp;optional.&nbsp;If&nbsp;you&nbsp;don't&nbsp;give&nbsp;one,&nbsp;a<br>
+free&nbsp;space&nbsp;in&nbsp;the&nbsp;patch&nbsp;will&nbsp;be&nbsp;used.<br>
+&nbsp;<br>
+Example:<br>
+p&nbsp;=&nbsp;<a href="#Patch">Patch</a>()<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+phasor&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'phasor~&nbsp;220')</tt></dd></dl>
+
+<dl><dt><a name="Object-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440')<br>
+print&nbsp;osc<br>
+[&nbsp;osc~&nbsp;440&nbsp;]</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="Object-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Object-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="Object-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Object-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Object-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="Object-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Object-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="Object-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#Object-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Object-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Object-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="Object-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Object-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="Object-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Object-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="Object-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Object-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="Object-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Object-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Patch">class <strong>Patch</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Patch-__init__"><strong>__init__</strong></a>(self, filename<font color="#909090">='receive.pd'</font>, hostname<font color="#909090">='localhost'</font>, port<font color="#909090">=4242</font>)</dt></dl>
+
+<dl><dt><a name="Patch-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Patch-clear"><strong>clear</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Patch-click"><strong>click</strong></a>(self, box)</dt></dl>
+
+<dl><dt><a name="Patch-connect"><strong>connect</strong></a>(self, source_box, source_outlet, target_box, target_inlet)</dt></dl>
+
+<dl><dt><a name="Patch-delete"><strong>delete</strong></a>(self, box)</dt></dl>
+
+<dl><dt><a name="Patch-disconnect"><strong>disconnect</strong></a>(self, source_box, source_outlet, target_box, target_inlet)</dt></dl>
+
+<dl><dt><a name="Patch-dsp"><strong>dsp</strong></a>(self, state)</dt></dl>
+
+<dl><dt><a name="Patch-edit"><strong>edit</strong></a>(self, box, label)</dt></dl>
+
+<dl><dt><a name="Patch-editmode"><strong>editmode</strong></a>(self, state)</dt></dl>
+
+<dl><dt><a name="Patch-move"><strong>move</strong></a>(self, box, x, y)</dt></dl>
+
+<dl><dt><a name="Patch-next_freeposition"><strong>next_freeposition</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Patch-select"><strong>select</strong></a>(self, box)</dt></dl>
+
+<dl><dt><a name="Patch-send"><strong>send</strong></a>(self, fudi_msg)</dt></dl>
+
+<dl><dt><a name="Patch-unselect"><strong>unselect</strong></a>(self, box)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Radio">class <strong>Radio</strong></a>(<a href="topd.html#GUI">GUI</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#Radio">Radio</a></dd>
+<dd><a href="topd.html#GUI">GUI</a></dd>
+<dd><a href="topd.html#Object">Object</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Radio-__init__"><strong>__init__</strong></a>(self, patch, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Object">Object</a>:<br>
+<dl><dt><a name="Radio-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440')<br>
+print&nbsp;osc<br>
+[&nbsp;osc~&nbsp;440&nbsp;]</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="Radio-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Radio-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="Radio-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Radio-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Radio-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="Radio-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Radio-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="Radio-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#Radio-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Radio-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Radio-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="Radio-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Radio-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="Radio-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Radio-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="Radio-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Radio-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="Radio-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Radio-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Symbol">class <strong>Symbol</strong></a>(<a href="topd.html#Box">Box</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Defines&nbsp;the&nbsp;symbolatom&nbsp;(symbol)&nbsp;elements&nbsp;of&nbsp;PD.<br>
+&nbsp;<br>
+Attributes:<br>
+patch&nbsp;--&nbsp;the&nbsp;'virtual'&nbsp;<a href="#Patch">Patch</a><br>
+x&nbsp;--&nbsp;box's&nbsp;x&nbsp;coordinate&nbsp;in&nbsp;the&nbsp;patch&nbsp;(optional)<br>
+y&nbsp;--&nbsp;box's&nbsp;y&nbsp;coordinate&nbsp;in&nbsp;the&nbsp;patch&nbsp;(optional)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#Symbol">Symbol</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Symbol-__init__"><strong>__init__</strong></a>(self, patch, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt><dd><tt>Creates&nbsp;a&nbsp;symbol&nbsp;box&nbsp;at&nbsp;x&nbsp;and&nbsp;y&nbsp;position.<br>
+&nbsp;<br>
+The&nbsp;x&nbsp;and&nbsp;y&nbsp;coordinates&nbsp;are&nbsp;optional.&nbsp;If&nbsp;you&nbsp;don't&nbsp;give&nbsp;one,&nbsp;a<br>
+free&nbsp;space&nbsp;in&nbsp;the&nbsp;patch&nbsp;will&nbsp;be&nbsp;used.<br>
+&nbsp;<br>
+Example:<br>
+p&nbsp;=&nbsp;<a href="#Patch">Patch</a>()<br>
+symbol&nbsp;=&nbsp;<a href="#Symbol">Symbol</a>(p,&nbsp;100,&nbsp;100)&nbsp;<br>
+s&nbsp;=&nbsp;<a href="#Symbol">Symbol</a>(p)</tt></dd></dl>
+
+<dl><dt><a name="Symbol-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;symbol&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="Symbol-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Symbol-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="Symbol-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Symbol-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Symbol-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="Symbol-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Symbol-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="Symbol-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#Symbol-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Symbol-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Symbol-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="Symbol-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Symbol-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="Symbol-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Symbol-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="Symbol-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Symbol-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="Symbol-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Symbol-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Toggle">class <strong>Toggle</strong></a>(<a href="topd.html#GUI">GUI</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#Toggle">Toggle</a></dd>
+<dd><a href="topd.html#GUI">GUI</a></dd>
+<dd><a href="topd.html#Object">Object</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Toggle-__init__"><strong>__init__</strong></a>(self, patch, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Toggle-off"><strong>off</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Toggle-on"><strong>on</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Object">Object</a>:<br>
+<dl><dt><a name="Toggle-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440')<br>
+print&nbsp;osc<br>
+[&nbsp;osc~&nbsp;440&nbsp;]</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="Toggle-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Toggle-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="Toggle-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Toggle-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Toggle-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="Toggle-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Toggle-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="Toggle-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#Toggle-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#Toggle-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#Toggle-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="Toggle-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#Toggle-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="Toggle-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Toggle-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="Toggle-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Toggle-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="Toggle-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#Toggle-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="VRadio">class <strong>VRadio</strong></a>(<a href="topd.html#Radio">Radio</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#VRadio">VRadio</a></dd>
+<dd><a href="topd.html#Radio">Radio</a></dd>
+<dd><a href="topd.html#GUI">GUI</a></dd>
+<dd><a href="topd.html#Object">Object</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="VRadio-__init__"><strong>__init__</strong></a>(self, patch, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Object">Object</a>:<br>
+<dl><dt><a name="VRadio-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440')<br>
+print&nbsp;osc<br>
+[&nbsp;osc~&nbsp;440&nbsp;]</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="VRadio-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#VRadio-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="VRadio-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#VRadio-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#VRadio-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="VRadio-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#VRadio-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="VRadio-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#VRadio-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#VRadio-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#VRadio-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="VRadio-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#VRadio-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="VRadio-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#VRadio-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="VRadio-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#VRadio-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="VRadio-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#VRadio-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="VSlider">class <strong>VSlider</strong></a>(<a href="topd.html#GUI">GUI</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#VSlider">VSlider</a></dd>
+<dd><a href="topd.html#GUI">GUI</a></dd>
+<dd><a href="topd.html#Object">Object</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="VSlider-__init__"><strong>__init__</strong></a>(self, patch, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="VSlider-decrement"><strong>decrement</strong></a>(self, step<font color="#909090">=1</font>)</dt></dl>
+
+<dl><dt><a name="VSlider-increment"><strong>increment</strong></a>(self, step<font color="#909090">=1</font>)</dt></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Object">Object</a>:<br>
+<dl><dt><a name="VSlider-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440')<br>
+print&nbsp;osc<br>
+[&nbsp;osc~&nbsp;440&nbsp;]</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="VSlider-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#VSlider-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="VSlider-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#VSlider-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#VSlider-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="VSlider-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#VSlider-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="VSlider-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#VSlider-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#VSlider-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#VSlider-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="VSlider-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#VSlider-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="VSlider-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#VSlider-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="VSlider-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#VSlider-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="VSlider-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#VSlider-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="VU">class <strong>VU</strong></a>(<a href="topd.html#GUI">GUI</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="topd.html#VU">VU</a></dd>
+<dd><a href="topd.html#GUI">GUI</a></dd>
+<dd><a href="topd.html#Object">Object</a></dd>
+<dd><a href="topd.html#Box">Box</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="VU-__init__"><strong>__init__</strong></a>(self, patch, x<font color="#909090">=None</font>, y<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Object">Object</a>:<br>
+<dl><dt><a name="VU-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Shows&nbsp;the&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;in&nbsp;a&nbsp;pretty&nbsp;formated&nbsp;ASCII-art&nbsp;way&nbsp;:-).<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440')<br>
+print&nbsp;osc<br>
+[&nbsp;osc~&nbsp;440&nbsp;]</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><a name="VU-click"><strong>click</strong></a>(self)</dt><dd><tt>Does&nbsp;a&nbsp;mouse&nbsp;left-click&nbsp;on&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'bang',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#VU-click">click</a>()</tt></dd></dl>
+
+<dl><dt><a name="VU-connect"><strong>connect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Connects&nbsp;the&nbsp;box&nbsp;with&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet&nbsp;of&nbsp;the<br>
+source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Adds&nbsp;the&nbsp;connection&nbsp;to&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#VU-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#VU-connect">connect</a>(0,&nbsp;dac,&nbsp;1)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;1&nbsp;of&nbsp;dac</tt></dd></dl>
+
+<dl><dt><a name="VU-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Removes&nbsp;the&nbsp;box&nbsp;from&nbsp;the&nbsp;patch.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#VU-delete">delete</a>()</tt></dd></dl>
+
+<dl><dt><a name="VU-disconnect"><strong>disconnect</strong></a>(self, source_outlet, target_box, target_inlet)</dt><dd><tt>Disconnects&nbsp;the&nbsp;box&nbsp;from&nbsp;another&nbsp;box.&nbsp;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;the&nbsp;outlet<br>
+of&nbsp;the&nbsp;source&nbsp;box&nbsp;and&nbsp;the&nbsp;inlet&nbsp;of&nbsp;the&nbsp;target&nbsp;box.<br>
+&nbsp;<br>
+Removes&nbsp;the&nbsp;connection&nbsp;from&nbsp;<a href="#Patch">Patch</a>'s&nbsp;connections&nbsp;list&nbsp;too.<br>
+osc.<a href="#VU-select">select</a>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;220',&nbsp;100,&nbsp;100)<br>
+dac&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;150)<br>
+osc.<a href="#VU-connect">connect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;connects&nbsp;outlet&nbsp;0&nbsp;of&nbsp;osc&nbsp;to&nbsp;inlet&nbsp;0&nbsp;of&nbsp;dac&nbsp;<br>
+osc.<a href="#VU-disconnect">disconnect</a>(0,&nbsp;dac,&nbsp;0)&nbsp;#&nbsp;disconnects&nbsp;the&nbsp;connection&nbsp;created&nbsp;above</tt></dd></dl>
+
+<dl><dt><a name="VU-edit"><strong>edit</strong></a>(self, label)</dt><dd><tt>Edits&nbsp;the&nbsp;label&nbsp;of&nbsp;the&nbsp;box,&nbsp;updating&nbsp;the&nbsp;old&nbsp;with&nbsp;the&nbsp;new&nbsp;one.<br>
+&nbsp;<br>
+Example:<br>
+msg&nbsp;=&nbsp;<a href="#Message">Message</a>(p,&nbsp;'foo',&nbsp;100,&nbsp;100)<br>
+msg.<a href="#VU-edit">edit</a>('bar')</tt></dd></dl>
+
+<dl><dt><a name="VU-move"><strong>move</strong></a>(self, x, y)</dt><dd><tt>Moves&nbsp;the&nbsp;box&nbsp;to&nbsp;the&nbsp;new&nbsp;position&nbsp;at&nbsp;coordinates&nbsp;x&nbsp;and&nbsp;y.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'osc~&nbsp;440',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#VU-move">move</a>(150,&nbsp;200)</tt></dd></dl>
+
+<dl><dt><a name="VU-select"><strong>select</strong></a>(self)</dt><dd><tt>Selects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#VU-select">select</a>()</tt></dd></dl>
+
+<dl><dt><a name="VU-unselect"><strong>unselect</strong></a>(self)</dt><dd><tt>Unselects&nbsp;the&nbsp;box.<br>
+&nbsp;<br>
+Example:<br>
+osc&nbsp;=&nbsp;<a href="#Object">Object</a>(p,&nbsp;'dac~',&nbsp;100,&nbsp;100)<br>
+osc.<a href="#VU-unselect">unselect</a>()</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="topd.html#Box">Box</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__author__</strong> = 'Vilson Vieira &lt;http://automata.cc&gt;'<br>
+<strong>__license__</strong> = 'GNU Public License'<br>
+<strong>__version__</strong> = '0.1'</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Vilson&nbsp;Vieira&nbsp;&lt;<a href="http://automata.cc">http://automata.cc</a>&gt;</td></tr></table>
+</body></html>
