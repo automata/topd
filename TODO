@@ -91,7 +91,8 @@
 * to test
 * to document
 * to create an OSC interface to FUDI messages
-* to integrate with PyMT (@alfakini :-D)
+* to integrate with PyMT (@alfakini's puretouch)
+  - http://github.com/alfakini/puretouch
 * to research some domain specific languages ([osc~ 440] =0> [dac~])
   - dseq (drum machine micro-language)
     http://www.csounds.com/journal/issue8/dseq.html

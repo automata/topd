@@ -46,6 +46,10 @@ class Box(object):
         self.unselect()
         self.click()
 
+        # first, press backspace (keycode: 8) to clean the old label
+        self.patch.send('key 1 8 0')
+        self.patch.send('key 0 8 0')
+
         for c in label:
             self.patch.send('key 1 %i 0' % ord(c))
             self.patch.send('key 0 %i 0' % ord(c))
@@ -101,9 +105,34 @@ class Message(Box):
 class Number(Box):
     def __init__(self, patch, x=None, y=None):
         super(Number, self).__init__(patch, 'floatatom', '', x, y)
+        self.value = 0
 
     def __str__(self):
-        return 'Hi... I am a number ;-)'
+        return '[%i `|' % self.value
+
+    def increment(self, step=1):
+        self.value += step
+
+        self.patch.editmode(False)
+        self.patch.send('mouse %i %i 1 0' %
+                        (self.x + 1, self.y + 1))
+        self.patch.send('motion %i %i 0' %
+                        (self.x + 1, self.y))
+        self.patch.send('mouseup %i %i 0 1' %
+                        (self.x + 1, self.y))
+        self.patch.editmode(True)
+        
+    def decrement(self, step=1):
+        self.value -= step
+
+        self.patch.editmode(False)
+        self.patch.send('mouse %i %i 1 0' %
+                        (self.x + 1, self.y + 1))
+        self.patch.send('motion %i %i 0' %
+                        (self.x + 1, self.y + 2))
+        self.patch.send('mouseup %i %i 0 1' %
+                        (self.x + 1, self.y + 2))
+        self.patch.editmode(True)
 
 class Symbol(Box):
     def __init__(self, patch, x=None, y=None):
