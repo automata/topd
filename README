@@ -4,80 +4,70 @@
 
 ###############################################################################
 
-1. Requisites
+1. Prerequisites
 
-To use ->pd you need:
+To use ->pd you need Pure Data and Python:
 
-    - Pure Data: $ sudo aptitude install puredata
-    - Python:    $ sudo aptitude install python
+     $ sudo aptitude install puredata
+     $ sudo aptitude install python
 
-If you want to use the Scheme version of ->pd, you will also need:
-
-    - Chicken Scheme: $ sudo aptitude install chicken-bin
-
-If you want to use the OSC handler of ->pd, you will need:
-
-    - pyOSC: $ git clone git://gitorious.org/pyosc/devel.git
-             $ cd devel
-             $ sudo ./setup.py install
-
-2. Intallation
+2. Installation
  
 Download the latest ->pd version at github.com:
 
-    $ git clone git://github.com/automata/topd.git
-    $ cd topd
+     $ git clone git://github.com/automata/topd.git
+     $ cd topd
 
 3. Testing
 
 Run the test.sh to a fast test:
 
-    $ ./test.sh
+     $ ./test.sh
 
 4. Using
 
 Run Pure Data:
 
-    $ pd receive.pd &
+     $ pd receive.pd &
 
 Run your Python interpreter:
 
-    $ python
+     $ python
     
 Import ->pd:
 
-    >>> from topd import *
+     >>> from topd import *
 
 Create a "virtual" patch (a connection to receive.pd patch):
 
-    >>> p = Patch('receive.pd', 'localhost', 4242)
+     >>> p = Patch('receive.pd', 'localhost', 4242)
 
 Create some PD objects:
 
-    >>> osc = Object(p, 'osc~ 440')
+     >>> osc = Object(p, 'osc~ 440')
 
 You can optionally specify x, y position of the object in the patch:
 
-    >>> dac = Object(p, 'dac~', 100, 200)
+     >>> dac = Object(p, 'dac~', 100, 200)
 
 Connect them (note the use of inlets/outlets numbers):
 
-    >>> osc.connect(0, dac, 0)
-    >>> osc.connect(0, dac, 1)
+     >>> osc.connect(0, dac, 0)
+     >>> osc.connect(0, dac, 1)
 
 Turn on the DSP:   
 
-    >>> p.dsp(True)
+     >>> p.dsp(True)
 
 Disconnect them:
 
-    >>> osc.disconnect(0, dac, 0)
-    >>> osc.disconnect(0, dac, 1)
+     >>> osc.disconnect(0, dac, 0)
+     >>> osc.disconnect(0, dac, 1)
 
 Delete them:
 
-    >>> osc.delete()
-    >>> dac.delete()
+     >>> osc.delete()
+     >>> dac.delete()
 
 Hack free and enjoy!
 
