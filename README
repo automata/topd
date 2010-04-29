@@ -18,13 +18,7 @@ Download the latest ->pd version at github.com:
      $ git clone git://github.com/automata/topd.git
      $ cd topd
 
-3. Testing
-
-Run the test.sh to a fast test:
-
-     $ ./test.sh
-
-4. Using
+3. Using
 
 Run Pure Data:
 
@@ -71,7 +65,7 @@ Delete them:
 
 Hack free and enjoy!
 
-5. Contributing
+4. Contributing
 
 Please, send an email to vilson@void.cc.
 
