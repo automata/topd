@@ -1,2 +1,0 @@
-#N canvas 0 0 450 300 10;
-#X obj 313 2 netreceive 3006 0 old;

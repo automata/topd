@@ -97,3 +97,4 @@
     http://www.csounds.com/journal/issue8/dseq.html
   - roll your own score syntax (python)
     http://slipmat.noisepages.com/2010/04/roll-your-own-score-syntax/
+* to load log files from pd -verbose -d 2 (or -d 3, for both core+gui debug)
