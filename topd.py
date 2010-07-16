@@ -78,7 +78,8 @@ class Box(object):
         self.patch.send('mouseup %i %i 1 0' % (self.x -2, self.y - 2))
         self.x = x
         self.y = y
-        self.patch.boxes[self.patch.boxes.index(self)] = self
+        if self in self.patch.boxes:
+            self.patch.boxes[self.patch.boxes.index(self)] = self
 
     def click(self):
         """
