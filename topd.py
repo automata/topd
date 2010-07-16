@@ -291,6 +291,23 @@ class Number(Box):
         """        
         return '[%i `|' % self.value
 
+    def update(self, new_value):
+        x = self.value
+        if new_value > self.value:
+            while(true):
+                if x == int(new_value):
+                    self.value = int(new_value)
+                    break
+                x += 1
+                self.increment()
+        elif new_value < self.value:
+            while(true):
+                if x == int(new_value):
+                    self.value = int(new_value)
+                    break
+                x -= 1
+                self.decrement()
+
     def increment(self, step=1):
         """
         Increments by a step the value of the number element.
@@ -427,6 +444,23 @@ class HSlider(GUI):
         self.min = 0
         self.max = 127
 
+    def update(self, new_value):
+        x = self.value
+        if new_value > self.value:
+            while(true):
+                if x == int(new_value):
+                    self.value = int(new_value)
+                    break
+                x += 1
+                self.increment()
+        elif new_value < self.value:
+            while(true):
+                if x == int(new_value):
+                    self.value = int(new_value)
+                    break
+                x -= 1
+                self.decrement()
+
     def increment(self, step=1):
         if self.value < self.max:
             self.value += step
@@ -459,6 +493,23 @@ class VSlider(GUI):
         self.value = 0
         self.min = 0
         self.max = 127
+
+    def update(self, new_value):
+        x = self.value
+        if new_value > self.value:
+            while(True):
+                if x == int(new_value):
+                    self.value = int(new_value)
+                    break
+                x += 1
+                self.increment()
+        elif new_value < self.value:
+            while(True):
+                if x == int(new_value):
+                    self.value = int(new_value)
+                    break
+                x -= 1
+                self.decrement()
 
     def increment(self, step=1):
         if self.value < self.max:
