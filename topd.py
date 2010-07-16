@@ -100,7 +100,7 @@ class Box(object):
         msg = Message(p, 'foo', 100, 100)
         msg.edit('bar')
         """
-        self.unselect()
+        self.select()
         self.click()
 
         # first, press backspace (keycode: 8) to clean the old label
@@ -170,16 +170,17 @@ class Box(object):
         osc.connect(0, dac, 0) # connects outlet 0 of osc to inlet 0 of dac 
         osc.disconnect(0, dac, 0) # disconnects the connection created above
         """
-        self.patch.send('disconnect %i %i %i %i' %
-                        (self.patch.boxes.index(self) + 1, source_outlet,
-                         self.patch.boxes.index(target_box) + 1, target_inlet))
+        if self in self.patch.boxes and target_box in self.patch.boxes:
+            self.patch.send('disconnect %i %i %i %i' %
+                            (self.patch.boxes.index(self) + 1, source_outlet,
+                             self.patch.boxes.index(target_box) + 1, target_inlet))
         for c in self.patch.connections:
             if ((c.source_box == self) and
                 (c.source_outlet == source_outlet) and
                 (c.target_box == target_box) and
                 (c.target_inlet == target_inlet)):
                 break
-        self.patch.connections.remove(c)
+            self.patch.connections.remove(c)
 
 class Object(Box):
     """
