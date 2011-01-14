@@ -1,0 +1,72 @@
+#+TITLE: A simple (Python|Scheme) Interface to Pure Data
+
+* Prerequisites
+
+To use ->pd you need Pure Data and Python:
+
+     $ sudo aptitude install puredata
+     $ sudo aptitude install python
+
+* Installation
+ 
+Download the latest ->pd version at github.com:
+
+     $ git clone git://github.com/automata/topd.git
+     $ cd topd
+
+* Using
+
+Run Pure Data:
+
+     $ pd receive.pd &
+
+Run your Python interpreter:
+
+     $ python
+    
+Import ->pd:
+
+     >>> from topd import *
+
+Create a "virtual" patch (a connection to receive.pd patch):
+
+     >>> p = Patch('receive.pd', 'localhost', 4242)
+
+Create some PD objects:
+
+     >>> osc = Object(p, 'osc~ 440')
+
+You can optionally specify x, y position of the object in the patch:
+
+     >>> dac = Object(p, 'dac~', 100, 200)
+
+Connect them (note the use of inlets/outlets numbers):
+
+     >>> osc.connect(0, dac, 0)
+     >>> osc.connect(0, dac, 1)
+
+Turn on the DSP:   
+
+     >>> p.dsp(True)
+
+Disconnect them:
+
+     >>> osc.disconnect(0, dac, 0)
+     >>> osc.disconnect(0, dac, 1)
+
+Delete them:
+
+     >>> osc.delete()
+     >>> dac.delete()
+
+Hack free and enjoy!
+
+For a complete description of all ->pd functions see the API documentation at
+http://automata.cc/wiki/uploads/Main/topd.html
+
+
+* Contributing
+
+Please, send an email to vilson@void.cc.
+
+ ~ http://automata.cc
