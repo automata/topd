@@ -1,72 +1,88 @@
-#+TITLE: A simple (Python|Scheme) Interface to Pure Data
+* A simple (Python|Scheme) Interface to Pure Data
 
+* Introduction
+*->pd* is a small collection of Python classes to communicate with [[http://puredata.info][Pure Data]] sending /FUDI/ messages by socket.
+
+It's just a hack. For more serious solutions see [[http://mccormick.cx/projects/PyPd/][PyPd]] and [[http://code.google.com/p/pyata/][PyATA]].
 * Prerequisites
+To use *->pd* you need [[http://puredata.info][Pure Data]] and [[http://python.org][Python]] installed:
 
-To use ->pd you need Pure Data and Python:
-
-     $ sudo aptitude install puredata
-     $ sudo aptitude install python
-
+#+begin_src sh
+$ sudo aptitude install puredata
+$ sudo aptitude install python
+#+end_src
 * Installation
- 
-Download the latest ->pd version at github.com:
+Download the latest *->pd* version at github.com:
 
-     $ git clone git://github.com/automata/topd.git
-     $ cd topd
-
+#+begin_src sh
+$ git clone git://github.com/automata/topd.git
+$ cd topd
+#+end_src
 * Using
-
 Run Pure Data:
 
-     $ pd receive.pd &
+#+begin_src sh
+$ pd receive.pd &
+#+end_src
 
 Run your Python interpreter:
 
-     $ python
+#+begin_src sh
+$ python
+#+end_src
     
 Import ->pd:
 
-     >>> from topd import *
+#+begin_src sh
+>>> from topd import *
+#+end_src
 
 Create a "virtual" patch (a connection to receive.pd patch):
 
-     >>> p = Patch('receive.pd', 'localhost', 4242)
+#+begin_src sh
+>>> p = Patch('receive.pd', 'localhost', 4242)
+#+end_src
 
 Create some PD objects:
 
-     >>> osc = Object(p, 'osc~ 440')
+#+begin_src sh
+>>> osc = Object(p, 'osc~ 440')
+#+end_src
 
 You can optionally specify x, y position of the object in the patch:
 
-     >>> dac = Object(p, 'dac~', 100, 200)
+#+begin_src sh
+>>> dac = Object(p, 'dac~', 100, 200)
+#+end_src
 
 Connect them (note the use of inlets/outlets numbers):
 
-     >>> osc.connect(0, dac, 0)
-     >>> osc.connect(0, dac, 1)
+#+begin_src sh
+>>> osc.connect(0, dac, 0)
+>>> osc.connect(0, dac, 1)
+#+end_src
 
 Turn on the DSP:   
 
-     >>> p.dsp(True)
+#+begin_src sh
+>>> p.dsp(True)
+#+end_src
 
 Disconnect them:
 
-     >>> osc.disconnect(0, dac, 0)
-     >>> osc.disconnect(0, dac, 1)
+#+begin_src sh
+>>> osc.disconnect(0, dac, 0)
+>>> osc.disconnect(0, dac, 1)
+#+end_src
 
 Delete them:
 
-     >>> osc.delete()
-     >>> dac.delete()
+#+begin_src sh
+>>> osc.delete()
+>>> dac.delete()
+#+end_src
 
 Hack free and enjoy!
 
-For a complete description of all ->pd functions see the API documentation at
+For a complete description of all *->pd* functions see the API documentation at
 http://automata.cc/wiki/uploads/Main/topd.html
-
-
-* Contributing
-
-Please, send an email to vilson@void.cc.
-
- ~ http://automata.cc
