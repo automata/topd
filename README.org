@@ -1,4 +1,4 @@
-* A simple (Python|Scheme) Interface to Pure Data
+* A simple Python Interface to Pure Data
 
 * Introduction
 *->pd* is a small collection of Python classes to communicate with [[http://puredata.info][Pure Data]] sending /FUDI/ messages by socket.
