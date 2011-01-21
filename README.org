@@ -9,6 +9,7 @@ To use *->pd* you need [[http://puredata.info][Pure Data]] and [[http://python.o
 
 #+begin_src sh
 $ sudo aptitude install puredata
+
 $ sudo aptitude install python
 #+end_src
 * Installation
@@ -16,6 +17,7 @@ Download the latest *->pd* version at github.com:
 
 #+begin_src sh
 $ git clone git://github.com/automata/topd.git
+
 $ cd topd
 #+end_src
 * Using
